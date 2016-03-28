@@ -11,8 +11,6 @@ you are headed, the latitude, the longitude, altitude, and the speed. The app al
 user's address. Unfortunately current location doesn't work on the simulator, so I can't display this app in this read me.
 
 
-GIF created with [LiceCap](http://www.cockos.com/licecap/).
-
 ## License
 
     Copyright [yyyy] [name of copyright owner]
