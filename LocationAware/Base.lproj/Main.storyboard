@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="LocationAware" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="daz-4E-t5B">
+                                <rect key="frame" x="0.0" y="20" width="600" height="347"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="xVZ-nS-5Io"/>
+                                </connections>
+                            </mapView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2QX-bd-Ray">
+                                <rect key="frame" x="279" y="428" width="42" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="403" id="9rl-0F-9Fe"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="9rl-0F-9Fe"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="9rl-0F-9Fe"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="43" y="616" width="315" height="126"/>
+                                </variation>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="daz-4E-t5B" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="4R9-l4-Hcq"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="daz-4E-t5B" secondAttribute="trailing" constant="-20" id="773-Cp-2bX"/>
+                            <constraint firstItem="2QX-bd-Ray" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="BMv-RV-tnY"/>
+                            <constraint firstItem="daz-4E-t5B" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="PEk-nd-0AA"/>
+                            <constraint firstItem="2QX-bd-Ray" firstAttribute="top" secondItem="daz-4E-t5B" secondAttribute="bottom" constant="8" id="Sk0-TO-Nky"/>
+                            <constraint firstItem="2QX-bd-Ray" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Uim-WL-0Zp"/>
+                            <constraint firstItem="2QX-bd-Ray" firstAttribute="top" secondItem="daz-4E-t5B" secondAttribute="bottom" constant="26" id="bao-Ec-fSe"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="daz-4E-t5B" secondAttribute="bottom" constant="150" id="i2V-wJ-lTc"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="2QX-bd-Ray" secondAttribute="bottom" constant="18" id="qW8-no-KAY"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="daz-4E-t5B" secondAttribute="bottom" constant="210" id="wYk-2T-Of8"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="BMv-RV-tnY"/>
+                                <exclude reference="Sk0-TO-Nky"/>
+                                <exclude reference="Uim-WL-0Zp"/>
+                                <exclude reference="bao-Ec-fSe"/>
+                                <exclude reference="i2V-wJ-lTc"/>
+                                <exclude reference="qW8-no-KAY"/>
+                                <exclude reference="wYk-2T-Of8"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact">
+                            <mask key="constraints">
+                                <include reference="BMv-RV-tnY"/>
+                                <include reference="Sk0-TO-Nky"/>
+                                <include reference="i2V-wJ-lTc"/>
+                                <include reference="qW8-no-KAY"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="Uim-WL-0Zp"/>
+                                <include reference="bao-Ec-fSe"/>
+                                <include reference="wYk-2T-Of8"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="informationLabel" destination="2QX-bd-Ray" id="CFI-d7-fIu"/>
+                        <outlet property="map" destination="daz-4E-t5B" id="NXd-H4-r6n"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="303" y="360"/>
+        </scene>
+    </scenes>
+</document>
